@@ -380,13 +380,13 @@ public class WMethod{
      pTableManager w = new pTableManager(FSM, numberOfStates, realInput);
      Vector <String> tests=generateTests(transitionCover, w); // Generate tests.
      Utilities.printAllTestCases(tests); // Print tests.
-     
-     // TODO: 	Write the necessary code to iterate through all test cases and run them against
-     // 		the FSM using the Utilities.runFSM() method. 
-     //
-     // Example use of the Utilities.runFSM() method
-     // Utilities.runFSM(FSM, 1, "a a b a b", " ");
-     
+     System.out.println();
+     Collections.sort(tests);
+    	 for(int i = 0;i<tests.size();i++){
+    		 Utilities.runFSM(FSM, 1, tests.get(i).replace("", " ").trim(), " ");
+    		 System.out.println();
+    	 }
+    
    }// End of main()
    
 }//End of class WMethod

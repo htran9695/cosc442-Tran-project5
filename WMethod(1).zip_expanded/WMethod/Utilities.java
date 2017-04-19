@@ -73,7 +73,6 @@ public class Utilities{
   }// End of printAllTestCases()
   
   
-  
   public static void runFSM(State [] FSM, int stateID, String input, String separator){
     
     // input is a sequence of  symbols  from the input alphabet separated by string in separator.
