@@ -382,10 +382,20 @@ public class WMethod{
      Utilities.printAllTestCases(tests); // Print tests.
      System.out.println();
      Collections.sort(tests);
-    	 for(int i = 0;i<tests.size();i++){
+    	/* for(int i = 0;i<tests.size();i++){
     		 Utilities.runFSM(FSM, 1, tests.get(i).replace("", " ").trim(), " ");
     		 System.out.println();
-    	 }
+    	 }*/
+     for(int i = 0;i<tests.size();i++){
+    	 System.out.println("@Test");
+    	 System.out.println("public void testCase" + i + "(){");
+    	 System.out.println("String a ="+ '"'  + tests.get(i).replace("", " ").trim()+'"'+";");
+    	 System.out.print("assertEquals( ");
+    	 Utilities.runFSM(FSM, 1, tests.get(i).replace("", " ").trim(), " ");
+    	 System.out.print(", bondRegex(a));");
+    	 System.out.println();
+    	 System.out.println("}");
+     }
     
    }// End of main()
    

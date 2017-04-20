@@ -81,26 +81,30 @@ public class Utilities{
     String token;  // An input symbol from the input sequence.
     StringTokenizer inputTokens=new StringTokenizer(input, separator);
     int currentState=stateID;  // Rest the FSM to state StateID.
-    Utilities.debugFSMExecution("\nFSM execution begins. Input: "+input+" Initial state: "+stateID);
+    //Utilities.debugFSMExecution("\nFSM execution begins. Input: "+input+" Initial state: "+stateID);
     if(FSM[stateID]==null){
-      Utilities.printException("wAlgorithm", "runFSM", "Invalid start state. Execution aborted.");
+      //Utilities.printException("wAlgorithm", "runFSM", "Invalid start state. Execution aborted.");
       return;
     }
     while(inputTokens.hasMoreTokens()){
       token=inputTokens.nextToken(); //Get next token from input.
       try{
-        Utilities.debugFSMExecution("Current state: "+currentState);
+        //Utilities.debugFSMExecution("Current state: "+currentState);
         Edge nextStateEdge=FSM[currentState].getNextState(token);
         String outputGenerated=nextStateEdge.output();
         int nextState=nextStateEdge.tail();
         outputPattern=outputPattern+outputGenerated;
-        Utilities.debugFSMExecution(" Input: "+token+" Next state: "+nextState+" Output: "+outputGenerated);
+        //Utilities.debugFSMExecution(" Input: "+token+" Next state: "+nextState+" Output: "+outputGenerated);
         currentState=nextState;
       }catch (NoNextStateException e){
-        Utilities.printException("WMethod", "runFSM", " Invalid token: "+token);
+        //Utilities.printException("WMethod", "runFSM", " Invalid token: "+token);
       }
     }
-    Utilities.debugFSMExecution("\nFSM execution completed. Final state: "+currentState);
-    Utilities.debugFSMExecution("Output pattern:"+outputPattern);
+    //Utilities.debugFSMExecution("\nFSM execution completed. Final state: "+currentState);
+    //Utilities.debugFSMExecution("Output pattern:"+outputPattern);
+    if(outputPattern.contains("Yes")){
+    	System.out.print("true");
+    }
+    else System.out.print("false");
   }
 }// End of class Utilities.

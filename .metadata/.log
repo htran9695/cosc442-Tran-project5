@@ -70,3 +70,12 @@ org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://do
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
 !SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-19 16:02:21.023
 !MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.pitest.pitclipse.core 1 0 2017-04-19 23:04:37.166
+!MESSAGE Classpath: [C:\Users\Hai Tran\Documents\GitHub\cosc442-Tran-project5\WMethod(1).zip_expanded\WMethod, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.command-line-osgi_1.1.9.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.html-report-osgi_1.1.9.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.osgi_1.1.9.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.pitrunner_1.1.6.201607050705.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.guava-shade-osgi_18.0.0.jar]
+
+!ENTRY org.pitest.pitclipse.core 1 0 2017-04-19 23:05:19.012
+!MESSAGE Classpath: [C:\Users\Hai Tran\Documents\GitHub\cosc442-Tran-project5\WMethod(1).zip_expanded\WMethod, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.command-line-osgi_1.1.9.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.html-report-osgi_1.1.9.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.osgi_1.1.9.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.pitrunner_1.1.6.201607050705.jar, C:\Users\Hai Tran\.p2\pool\plugins\org.pitest.guava-shade-osgi_18.0.0.jar]
+
+!ENTRY com.instantiations.eclipse 1 0 2017-04-19 23:27:45.597
+!MESSAGE cannot support aboutToShutdown event - 2

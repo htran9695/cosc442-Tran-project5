@@ -1,0 +1,3 @@
+package TestSubject;
+
+import org.junit.runner.JUnitCore;
